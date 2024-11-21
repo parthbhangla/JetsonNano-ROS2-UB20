@@ -125,7 +125,7 @@ chmod +x setup_cuda_foxy_without_gui.sh # For without GUI
 ### Credits:
 - **[QEngineering](https://github.com/Qengineering)** - has a lot of other guides and resources about Jetson Nano. Great resource!
 
-- **[JetsonNano ROS2](https://github.com/CollaborativeRoboticsLab/JetsonNano-ROS2)** by [Kalana Ratnayake](https://github.com/KalanaRatnayake)** - has a guide on how to install ROS2 Humble using Docker image. Check it out!
+- **[JetsonNano ROS2](https://github.com/CollaborativeRoboticsLab/JetsonNano-ROS2)** by **[Kalana Ratnayake](https://github.com/KalanaRatnayake)** - has a guide on how to install ROS2 Humble using Docker image. Check it out!
 ---
 ### Doubts / Questions:
 - Raise an issue. I will try my best to answer it.
