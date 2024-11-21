@@ -48,4 +48,3 @@ echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
 
 # Final message
 echo "Setup completed. Please restart your terminal or run 'source ~/.bashrc' to apply changes."
-echo "Credits: Parth Bhangla"
