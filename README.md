@@ -43,5 +43,79 @@ ros2 run demo_nodes_cpp listener
 sudo apt update
 sudo apt upgrade
 ```
+---
+
+## Manual Installation:
+
+- Download a Bare image running Ubuntu20.04 on Jetson Nano **[here](https://ln5.sync.com/dl/7261d3770/jebr2z9k-kwj4wwvd-3wxjtqsx-36zbu3cx/view/default/11304887590004)**. Credits to people over at **[QEngineering](https://github.com/Qengineering)** for this.
+- This image is overclocked at 1900MHz, so plan of using a fan to cool the Jetson when running this image. Also use the 5V 4A 20W barrel jack power supply for better perfomance.
+
+### Pre-installed software.
+
+Clicking on the links below will direct you to QEngineering's installation guide:
+- [OpenCV](https://qengineering.eu/install-opencv-on-jetson-nano.html) 4.8.0
+- [TensorFlow](https://qengineering.eu/install-tensorflow-2.4.0-on-jetson-nano.html) 2.4.1
+- [Pytorch](https://qengineering.eu/install-pytorch-on-jetson-nano.html) 1.13.0
+- [TorchVision](https://qengineering.eu/install-pytorch-on-jetson-nano.html) 0.14.0
+- [TensorRT](https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image/issues/11) 8.0.1.6
+- [TeamViewer aarch64](https://www.teamviewer.com/en/download/linux/) 15.24.5
+- [Jtop](https://github.com/rbonghi/jetson_stats) 4.2.1
+
+Tensorflow 2.5 and above, just like PyTorch 2.0, requires CUDA 11. CUDA version 11 cannot be installed on a Jetson Nano due to incompatibility between the GPU and low-level software.
+
+## Installing Foxy:
+
+* First and foremost
+```bash
+sudo apt update
+sudo apt upgrade
+```
+* Add CUDA path to .bashrc
+```bash
+gedit .bashrc
+export PATH=${PATH}:/usr/local/cuda/bin
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/cuda/lib64
+```
+* Test CUDA functionality
+```bash
+/usr/local/cuda-10.2/bin/cuda-install-samples-10.2.sh .
+cd NVIDIA_CUDA-10.2_Samples/
+make HOST_COMPILER=/usr/bin/g++-7
+./bin/aarch64/linux/release/deviceQuery
+```
+* You should get an output similar to
+```bash
+./bin/aarch64/linux/release/deviceQuery Starting...
+
+CUDA Device Query (Runtime API) version (CUDART static linking)
+
+Detected 1 CUDA Capable device(s)
+.
+.
+.
+Result = PASS
+```
+
+* Now, after setting all of this up you can follow the steps to install ROS2 Foxy with the instructions **[here]([here](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html))**. Choose if you want the version with the GUI or without the GUI.
+
+* Finally to setup the environment
+```bash
+echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
+```
+* Verify using the steps mentioned **[here](#to-verify-ros2-installation)**.
 
 ---
+### Credits:
+- **[QEngineering](https://github.com/Qengineering)** - has a lot of other guides and resources about Jetson Nano. Great resource!
+
+- **[JetsonNano ROS2](https://github.com/CollaborativeRoboticsLab/JetsonNano-ROS2)** by [Kalana Ratnayake](https://github.com/KalanaRatnayake)** - has a guide on how to install ROS2 Humble using Docker image. Check it out!
+---
+### Doubts / Questions:
+- Raise an issue. I will try my best to answer it.
+
+### Contributions:
+
+- All contributions are welcome. Fork the repository and open a pull request.
+---
+
+Leave a star if it helped you out. Best of luck!
