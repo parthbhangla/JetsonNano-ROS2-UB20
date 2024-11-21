@@ -96,7 +96,7 @@ Detected 1 CUDA Capable device(s)
 Result = PASS
 ```
 
-* Now, after setting all of this up you can follow the steps to install ROS2 Foxy with the instructions **[here]([here](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html))**. Choose if you want the version with the GUI or without the GUI.
+* Now, after setting all of this up you can follow the steps to install ROS2 Foxy with the instructions **[here](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)**. Choose if you want the version with the GUI or without the GUI.
 
 * Finally to setup the environment
 ```bash
