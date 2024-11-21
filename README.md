@@ -63,7 +63,7 @@ Clicking on the links below will direct you to QEngineering's installation guide
 
 Tensorflow 2.5 and above, just like PyTorch 2.0, requires CUDA 11. CUDA version 11 cannot be installed on a Jetson Nano due to incompatibility between the GPU and low-level software.
 
-## Installing Foxy:
+## Installing Foxy (Manually):
 
 * First and foremost
 ```bash
@@ -103,6 +103,23 @@ Result = PASS
 echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
 ```
 * Verify using the steps mentioned **[here](#to-verify-ros2-installation)**.
+
+## Installing Foxy (Using Script):
+- Install the bare Ubuntu20.04 image from **[here](https://ln5.sync.com/dl/7261d3770/jebr2z9k-kwj4wwvd-3wxjtqsx-36zbu3cx/view/default/11304887590004)** before running the scripts.
+1. Choose the script based on your preference:
+   - [With GUI](https://github.com/parthbhangla/JetsonNano-ROS2-UB20/blob/main/scripts/setup_cuda_foxy_with_gui.sh)
+   - [Without GUI](https://github.com/parthbhangla/JetsonNano-ROS2-UB20/blob/main/scripts/setup_cuda_foxy_without_gui.sh)
+2. Download the selected script to your Jetson Nano.
+3. Make the script executable:
+```bash
+chmod +x setup_cuda_foxy_with_gui.sh # For GUI
+chmod +x setup_cuda_foxy_without_gui.sh # For without GUI
+```
+4. Run the script:
+```bash
+./setup_cuda_foxy_with_gui.sh # For GUI
+./setup_cuda_foxy_without_gui.sh # For without GUI
+```
 
 ---
 ### Credits:
