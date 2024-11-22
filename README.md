@@ -13,7 +13,7 @@ a0616282fe8aa25da4b26b6a3a8d1610
 ```
 ### Flash The Image:
 1. Download the pre-built image file from the above link.
-2. Flash the image to your microSD card using either **[balenaEtcher](https://www.balena.io/etcher)** or **[Raspberry Pi Image](https://www.raspberrypi.com/software/)**. You'll need a minimum storage of 32GB.
+2. Flash the image to your microSD card using either **[balenaEtcher](https://www.balena.io/etcher)** or ~~**[Raspberry Pi Image](https://www.raspberrypi.com/software/)**~~. You'll need a minimum storage of 32GB.
 3. Insert the flashed microSD card into your Jetson Nano and you should be all set. If prompted for password - use **'jetson'**.
 
 Once you boot up the Jetson Nano, ROS2 will be ready to use. The ROS2 Foxy installed on the image is with the GUI.
